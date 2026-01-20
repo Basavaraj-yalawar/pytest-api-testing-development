@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [development]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  pull-requests: write
+
 jobs:
   api-tests:
     runs-on: ubuntu-latest
@@ -89,7 +95,8 @@ jobs:
 
       # ---------- PUBLISH TO GITHUB PAGES (Optional) ----------
       - name: Deploy reports to GitHub Pages
-        if: success() && github.ref == 'refs/heads/development'
+        if: success() && github.ref == 'refs/heads/development' && github.event_name == 'push'
+        continue-on-error: true
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
