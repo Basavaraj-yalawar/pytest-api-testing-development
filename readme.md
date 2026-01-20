@@ -175,7 +175,7 @@ One or more steps marked as failed
 
 Screenshot embedded in report
 
-Stored vs Live content displayed
+Stored vs Live content display
 
 CI job fails intentionally with evidence
 ```
