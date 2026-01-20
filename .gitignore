@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+
+# Reports
+reports/
+newman-report/
+
+# Node
+node_modules/
