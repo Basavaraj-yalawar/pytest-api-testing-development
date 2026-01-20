@@ -188,5 +188,3 @@ main
 └── development
 
 ```
-## CREATED BY
-Rajeev S
